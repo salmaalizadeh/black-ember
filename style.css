@@ -434,3 +434,362 @@ body {
     padding: 100px 15px 40px;
   }
 }
+.home {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("images/back.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-box {
+  padding: 45px;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+
+  backdrop-filter: blur(8px);
+
+  animation: showText 1.2s ease;
+}
+
+.hero-small {
+  color: #c59b6d;
+  letter-spacing: 4px;
+  font-size: 14px;
+}
+
+.hero-box h1 {
+  font-size: 55px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.hero-box h1 span {
+  color: #c59b6d;
+}
+
+.hero-text {
+  color: #ddd;
+  line-height: 1.8;
+}
+
+.hero-btn {
+  padding: 12px 25px;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  transform: translateY(-4px);
+}
+
+.jacket-img {
+  max-height: 570px;
+  object-fit: contain;
+
+  animation:
+    showJacket 1.5s ease,
+    floatJacket 4s ease-in-out infinite;
+}
+
+/* Snow */
+
+.snow {
+  position: absolute;
+  top: -30px;
+  color: #d8c09a;
+  font-size: 20px;
+  z-index: 1;
+
+  animation: snowFall 7s linear infinite;
+}
+
+.snow1 {
+  left: 10%;
+}
+
+.snow2 {
+  left: 25%;
+  animation-delay: 2s;
+}
+
+.snow3 {
+  left: 40%;
+  animation-delay: 1s;
+}
+
+.snow4 {
+  left: 60%;
+  animation-delay: 3s;
+}
+
+.snow5 {
+  left: 75%;
+  animation-delay: 1.5s;
+}
+
+.snow6 {
+  left: 90%;
+  animation-delay: 4s;
+}
+
+/* Animations */
+
+@keyframes snowFall {
+  0% {
+    transform: translateY(0) rotate(0);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes floatJacket {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes showJacket {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes showText {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 991px) {
+  .hero-box {
+    margin-top: 80px;
+    padding: 30px;
+  }
+
+  .hero-box h1 {
+    font-size: 42px;
+  }
+
+  .jacket-img {
+    max-height: 400px;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-box {
+    padding: 25px;
+  }
+
+  .hero-box h1 {
+    font-size: 34px;
+  }
+
+  .hero-text {
+    font-size: 14px;
+  }
+
+  .hero-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .jacket-img {
+    max-height: 300;
+  }
+}
+.snow-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.snow-container span {
+  position: absolute;
+  top: -30px;
+  color: #e8d4ad;
+  font-size: 18px;
+  opacity: 0.8;
+
+  animation: snowFall 8s linear infinite;
+}
+
+/* موقعیت و اندازه برف‌ها */
+
+.snow-container span:nth-child(1) {
+  left: 5%;
+  animation-delay: 0s;
+  font-size: 15px;
+}
+
+.snow-container span:nth-child(2) {
+  left: 12%;
+  animation-delay: 2s;
+  font-size: 22px;
+}
+
+.snow-container span:nth-child(3) {
+  left: 20%;
+  animation-delay: 4s;
+  font-size: 14px;
+}
+
+.snow-container span:nth-child(4) {
+  left: 28%;
+  animation-delay: 1s;
+  font-size: 20px;
+}
+
+.snow-container span:nth-child(5) {
+  left: 35%;
+  animation-delay: 5s;
+  font-size: 13px;
+}
+
+.snow-container span:nth-child(6) {
+  left: 43%;
+  animation-delay: 3s;
+  font-size: 19px;
+}
+
+.snow-container span:nth-child(7) {
+  left: 50%;
+  animation-delay: 6s;
+  font-size: 15px;
+}
+
+.snow-container span:nth-child(8) {
+  left: 58%;
+  animation-delay: 1.5s;
+  font-size: 22px;
+}
+
+.snow-container span:nth-child(9) {
+  left: 65%;
+  animation-delay: 4.5s;
+  font-size: 16px;
+}
+
+.snow-container span:nth-child(10) {
+  left: 72%;
+  animation-delay: 2.5s;
+  font-size: 20px;
+}
+
+.snow-container span:nth-child(11) {
+  left: 78%;
+  animation-delay: 5.5s;
+  font-size: 14px;
+}
+
+.snow-container span:nth-child(12) {
+  left: 84%;
+  animation-delay: 3.5s;
+  font-size: 21px;
+}
+
+.snow-container span:nth-child(13) {
+  left: 90%;
+  animation-delay: 6.5s;
+  font-size: 15px;
+}
+
+.snow-container span:nth-child(14) {
+  left: 95%;
+  animation-delay: 1s;
+  font-size: 19px;
+}
+
+.snow-container span:nth-child(15) {
+  left: 17%;
+  animation-delay: 7s;
+  font-size: 12px;
+}
+
+.snow-container span:nth-child(16) {
+  left: 47%;
+  animation-delay: 7.5s;
+  font-size: 17px;
+}
+
+.snow-container span:nth-child(17) {
+  left: 67%;
+  animation-delay: 8s;
+  font-size: 13px;
+}
+
+.snow-container span:nth-child(18) {
+  left: 32%;
+  animation-delay: 6s;
+  font-size: 18px;
+}
+
+.snow-container span:nth-child(19) {
+  left: 88%;
+  animation-delay: 4s;
+  font-size: 14px;
+}
+
+.snow-container span:nth-child(20) {
+  left: 55%;
+  animation-delay: 2s;
+  font-size: 20px;
+}
+
+@keyframes snowFall {
+  0% {
+    transform: translateY(-30px) rotate(0deg);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: translateY(50vh) translateX(30px) rotate(180deg);
+  }
+
+  100% {
+    transform: translateY(110vh) translateX(-30px) rotate(360deg);
+    opacity: 0;
+  }
+}
